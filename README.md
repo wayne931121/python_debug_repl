@@ -55,7 +55,51 @@ $cdebug20251007-080500: exit
 PS C:\Users\原神\Desktop>
 ```
 
-# Code
+# Example
+```py
+import os, time
+
+######################################################################################################################
+print("import torch")
+os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "1"
+
+import torch
+from diffusers import AutoencoderKLCogVideoX, CogVideoXImageToVideoPipeline, CogVideoXTransformer3DModel
+from diffusers.utils import export_to_video, load_image
+from transformers import T5EncoderModel
+
+"""#### Load models and create pipeline
+
+Note: `bfloat16`, which is the recommended dtype for running "CogVideoX-5b-I2V" will cause OOM errors due to lack of efficient support on Turing GPUs.
+
+Therefore, we must use `float16`, which might result in poorer generation quality. The recommended solution is to use Ampere or above GPUs, which also support efficient quantization kernels from [TorchAO](https://github.com/pytorch/ao) :(
+"""
+
+# model_id = "THUDM/CogVideoX-5b-I2V"
+
+##!!!!!!!REMBER USE r""，NOT ""!!!!!!!!!!!!!!!
+##WILL CAUSE BUG!!!!!!!!!!##########
+
+path = r"D:\2\hub\models--THUDM--CogVideoX-5b-I2V\snapshots\a6f0f4858a8395e7429d82493864ce92bf73af11"
+
+print("Load Model")
+
+print("transformer")
+transformer = CogVideoXTransformer3DModel.from_pretrained(path, subfolder="transformer", torch_dtype=torch.float16)
+print("text_encoder")
+text_encoder = T5EncoderModel.from_pretrained(path, subfolder="text_encoder", torch_dtype=torch.float16)
+print("vae")
+vae = AutoencoderKLCogVideoX.from_pretrained(path, subfolder="vae", torch_dtype=torch.float16)
+
+print("START THE SHELL... Begin INTO DEBUG MODE....")
+######################################################################################################################
+
+import cdebug
+
+cdebug.main(globals())
+```
+
+# Old_Code
 ```py
 import os, time
 
@@ -77,7 +121,7 @@ while 1:
         print(e)
 ```
 
-# Example
+# Old_Example
 ```py
 import os, time
 
