@@ -11,11 +11,11 @@ The code you need to run first
 
 while 1:
     try:
-        cd = input("$cdebug" + time.strftime("%Y%m%d-%H%M%S", time.localtime()) + ": " )
+        cd = input("\033[1;32m$cdebug" + time.strftime("%Y%m%d-%H%M%S", time.localtime()) + ": \033[00m" )
         if cd=="exit":
              break
         cd = cd.replace("\\br","\n")
-        if len(cd) and cd[0:1]=="!":
+        if cd and cd[0:1]=="!":
             os.system(cd[1:])
         else:
             exec(cd, globals())
@@ -109,7 +109,7 @@ $cdebug20251007-080419: !dir
 2025/10/07  上午 02:55            20,513 系統管理員 命令提示字元 - conda  activate Daii - python  cdebug.py3.txt
               14 個檔案          96,344 位元組
                3 個目錄  45,472,346,112 位元組可用
-$cdebug20251007-080423: def a():\br  print(2)
+$cdebug20251007-080423: def a():\br  print(2,"\n",end="\n")
 $cdebug20251007-080455: a()
 2
 $cdebug20251007-080500: exit
