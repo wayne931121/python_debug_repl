@@ -13,6 +13,48 @@ import cdebug
 cdebug.main(globals())
 ```
 
+# Usage
+## ```\br``` is break line in code
+## ```\n``` is break line in string
+## ```!code``` will run code in terminal
+## ```exit``` will exit
+```ps
+PS C:\Users\原神\Desktop> python cdebug.py
+$cdebug20251007-080412: print(1)
+1
+$cdebug20251007-080419: !dir
+ 磁碟區 C 中的磁碟是 Windows
+ 磁碟區序號:  B8C5-1580
+
+ C:\Users\原神\Desktop 的目錄
+
+2025/10/07  上午 02:55    <DIR>          .
+2025/10/06  上午 08:39    <DIR>          ..
+2025/10/06  下午 10:35            11,407 b.jpg
+2025/10/07  上午 07:51               370 cdebug.py
+2025/10/07  上午 12:01             3,906 cogvideox_i2v_colab.py
+2025/09/19  下午 05:27             2,261 Google Chrome.lnk
+2025/09/07  下午 10:41             1,241 LINE.lnk
+2025/09/22  上午 12:09               904 Lively Wallpaper.lnk
+2025/05/22  下午 04:21             2,335 Microsoft Edge.lnk
+2024/05/28  下午 06:57             1,077 OBS Studio (64bit).lnk
+2025/05/22  下午 04:59             1,431 Roblox Player.lnk
+2025/05/22  下午 04:56             1,259 Roblox Studio.lnk
+2025/10/06  下午 10:34    <DIR>          神秘資料夾
+2025/10/07  上午 12:23            13,833 系統管理員 命令提示字元 - conda  activate Daii - python  cdebug.py.txt
+2025/10/07  上午 01:12            15,933 系統管理員 命令提示字元 - conda  activate Daii - python  cdebug.py1.txt
+2025/10/07  上午 02:08            19,874 系統管理員 命令提示字元 - conda  activate Daii - python  cdebug.py111.txt
+2025/10/07  上午 02:55            20,513 系統管理員 命令提示字元 - conda  activate Daii - python  cdebug.py3.txt
+              14 個檔案          96,344 位元組
+               3 個目錄  45,472,346,112 位元組可用
+$cdebug20251007-080423: def a():\br  print(2,"\n",end="\n")
+$cdebug20251007-080455: a()
+2
+
+$cdebug20251007-080500: exit
+PS C:\Users\原神\Desktop>
+```
+
 # Code
 ```py
 import os, time
@@ -86,46 +128,4 @@ while 1:
             exec(cd, globals())
     except Exception as e:
         print(e)
-```
-
-# Usage
-## ```\br``` is break line in code
-## ```\n``` is break line in string
-## ```!code``` will run code in terminal
-## ```exit``` will exit
-```ps
-PS C:\Users\原神\Desktop> python cdebug.py
-$cdebug20251007-080412: print(1)
-1
-$cdebug20251007-080419: !dir
- 磁碟區 C 中的磁碟是 Windows
- 磁碟區序號:  B8C5-1580
-
- C:\Users\原神\Desktop 的目錄
-
-2025/10/07  上午 02:55    <DIR>          .
-2025/10/06  上午 08:39    <DIR>          ..
-2025/10/06  下午 10:35            11,407 b.jpg
-2025/10/07  上午 07:51               370 cdebug.py
-2025/10/07  上午 12:01             3,906 cogvideox_i2v_colab.py
-2025/09/19  下午 05:27             2,261 Google Chrome.lnk
-2025/09/07  下午 10:41             1,241 LINE.lnk
-2025/09/22  上午 12:09               904 Lively Wallpaper.lnk
-2025/05/22  下午 04:21             2,335 Microsoft Edge.lnk
-2024/05/28  下午 06:57             1,077 OBS Studio (64bit).lnk
-2025/05/22  下午 04:59             1,431 Roblox Player.lnk
-2025/05/22  下午 04:56             1,259 Roblox Studio.lnk
-2025/10/06  下午 10:34    <DIR>          神秘資料夾
-2025/10/07  上午 12:23            13,833 系統管理員 命令提示字元 - conda  activate Daii - python  cdebug.py.txt
-2025/10/07  上午 01:12            15,933 系統管理員 命令提示字元 - conda  activate Daii - python  cdebug.py1.txt
-2025/10/07  上午 02:08            19,874 系統管理員 命令提示字元 - conda  activate Daii - python  cdebug.py111.txt
-2025/10/07  上午 02:55            20,513 系統管理員 命令提示字元 - conda  activate Daii - python  cdebug.py3.txt
-              14 個檔案          96,344 位元組
-               3 個目錄  45,472,346,112 位元組可用
-$cdebug20251007-080423: def a():\br  print(2,"\n",end="\n")
-$cdebug20251007-080455: a()
-2
-
-$cdebug20251007-080500: exit
-PS C:\Users\原神\Desktop>
 ```
