@@ -77,7 +77,8 @@ while 1:
 ```
 
 # Usage
-## ```\br``` is break line
+## ```\br``` is break line in code
+## ```\n``` is break line in string
 ## ```!code``` will run code in terminal
 ## ```exit``` will exit
 ```ps
