@@ -19,7 +19,7 @@ cdebug.main(globals())
 ## ```!code``` will run code in terminal
 ## ```exit``` will exit
 ```ps
-PS C:\Users\原神\Desktop> python cdebug.py
+PS C:\Users\原神\Desktop> python test.py
 $cdebug20251007-080412: print(1)
 1
 $cdebug20251007-080419: !dir
