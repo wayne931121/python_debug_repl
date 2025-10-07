@@ -78,7 +78,7 @@ while 1:
 
 # Usage
 ## ```\br``` is break line
-## ```!code``` will run code is terminal
+## ```!code``` will run code in terminal
 ## ```exit``` will exit
 ```ps
 PS C:\Users\原神\Desktop> python cdebug.py
