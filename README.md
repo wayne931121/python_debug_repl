@@ -1,6 +1,18 @@
 # python_debug_repl
 When I use ai model in situation cannot use jupyter notebook, I write this script for me, because I don't want to copy paste everytime and reload model to continue debug need many time.
 
+# Install
+```cmd
+pip install https://github.com/wayne931121/python_debug_repl/releases/download/0.0.1/cdebug-0.0.1.tar.gz
+```
+
+# Call
+```py
+import cdebug
+
+cdebug.main(globals())
+```
+
 # Code
 ```py
 import os, time
