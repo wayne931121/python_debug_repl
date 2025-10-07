@@ -57,7 +57,8 @@ PS C:\Users\原神\Desktop>
 
 # Example
 ```py
-import os, time
+import os
+import cdebug
 
 ######################################################################################################################
 print("import torch")
@@ -93,8 +94,6 @@ vae = AutoencoderKLCogVideoX.from_pretrained(path, subfolder="vae", torch_dtype=
 
 print("START THE SHELL... Begin INTO DEBUG MODE....")
 ######################################################################################################################
-
-import cdebug
 
 cdebug.main(globals())
 ```
