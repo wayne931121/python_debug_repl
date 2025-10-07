@@ -112,6 +112,7 @@ $cdebug20251007-080419: !dir
 $cdebug20251007-080423: def a():\br  print(2,"\n",end="\n")
 $cdebug20251007-080455: a()
 2
+
 $cdebug20251007-080500: exit
 PS C:\Users\原神\Desktop>
 ```
