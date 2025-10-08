@@ -5,6 +5,10 @@ When I use ai model in situation cannot use jupyter notebook, I write this scrip
 ```cmd
 pip install https://github.com/wayne931121/python_debug_repl/releases/download/0.0.1/cdebug-0.0.1.tar.gz
 ```
+or
+```cmd
+pip install cdebug
+```
 
 # Call
 ```py
