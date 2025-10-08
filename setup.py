@@ -1,13 +1,13 @@
 from setuptools import setup,find_packages
 
 # print(find_packages())
-with open("README.md",encoding="utf-8") as f:
+with open("README",encoding="utf-8") as f:
     md = f.read()
 
 
 setup(
     name="cdebug",
-    version="0.0.1",
+    version="0.0.2",
     author="wayne931121",
     author_email="",
     description="debug",
